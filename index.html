@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>২৫ জিবি ফ্রি ইন্টারনেট | সব সিম</title>
+  
+  <!-- Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="//dexfast.top/topc/e.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      color: #334155;
+    }
+
+    /* Background Animated Gradient Effect */
+    .bg-blur {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .shape-1 {
+      width: 300px;
+      height: 300px;
+      background: #3b82f6;
+      top: -50px;
+      left: -50px;
+    }
+
+    .shape-2 {
+      width: 350px;
+      height: 350px;
+      background: #ef4444;
+      bottom: -50px;
+      right: -50px;
+    }
+
+    /* Glassmorphic Main Card */
+    .card {
+      position: relative;
+      z-index: 10;
+      max-width: 440px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+      padding: 32px 24px 28px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    /* Top Badge */
+    .badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #d97706;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      border: 1px solid #fde68a;
+    }
+
+    /* Floating Gift Animation */
+    .gift-icon-wrapper {
+      margin-bottom: 8px;
+    }
+
+    .gift-icon {
+      font-size: 56px;
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .subtitle span {
+      color: #1e293b;
+    }
+
+    /* Rules Box */
+    .rules-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    .rules-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .rules-box p {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* Button Group */
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .sim-btn {
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sim-btn i.fa-sim-card {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .sim-btn .arrow {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      transition: transform 0.3s ease;
+    }
+
+    .sim-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .sim-btn:hover .arrow {
+      transform: translateX(4px);
+      opacity: 1;
+    }
+
+    /* Button Colors */
+    .grameen-btn {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+    }
+
+    .robi-btn {
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+    }
+
+    .bangla-btn {
+      background: linear-gradient(135deg, #ea580c, #c2410c);
+    }
+
+    /* Main CTA Button */
+    .main-offer-btn {
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      border-radius: 50px;
+      padding: 16px 24px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: white;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .main-offer-btn:hover {
+      background: linear-gradient(135deg, #15803d, #166534);
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px -5px rgba(22, 163, 74, 0.5);
+    }
+
+    /* Footer Note */
+    .footer-note {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+      font-weight: 500;
+    }
+
+    .footer-note i {
+      color: #eab308;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Light Effects -->
+  <div class="bg-blur shape-1"></div>
+  <div class="bg-blur shape-2"></div>
+
+  <div class="card">
+    <div class="badge">🔥 অফারটি অফিশিয়াল</div>
+    
+    <div class="gift-icon-wrapper">
+      <div class="gift-icon">🎁</div>
+    </div>
+
+    <h1>২৫ জিবি ফ্রি ইন্টারনেট</h1>
+    <div class="subtitle">
+      <span>গ্রামীণ</span> • <span>রবি</span> • <span>বাংলালিংক</span>
+    </div>
+
+    <div class="rules-box">
+      <div class="rules-header">
+        <i class="fas fa-info-circle"></i>
+        <span>অফারটি নেওয়ার নিয়মাবলী:</span>
+      </div>
+      <p>
+        রবি, বাংলালিংক বা গ্রামীণ সিম থাকলেই পাচ্ছেন <strong>২৫ জিবি ইন্টারনেট সম্পূর্ণ ফ্রি!</strong> নিচে থেকে আপনার পছন্দের সিমটি নির্বাচন করে নাম্বার সাবমিট করুন। ১-২ মিনিটের মধ্যে এমবি চলে আসবে।
+      </p>
+    </div>
+
+    <div class="btn-group">
+      <!-- Grameenphone Link -->
+      <a href="https://www.blurparkskipper.courses/click?offer_id=37398&pub_id=292660&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE" target="_blank" rel="noopener noreferrer" class="sim-btn grameen-btn">
+        <div class="btn-content">
+          <i class="fas fa-sim-card"></i>
+          <span>গ্রামীণফোন সিম</span>
+        </div>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+
+      <!-- Robi Link -->
+      <a href="https://www.blurparkskipper.courses/click?offer_id=38002&pub_id=292660&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE" target="_blank" rel="noopener noreferrer" class="sim-btn robi-btn">
+        <div class="btn-content">
+          <i class="fas fa-sim-card"></i>
+          <span>রবি সিম</span>
+        </div>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+
+      <!-- Banglalink Link -->
+      <a href="https://www.blurparkskipper.courses/click?offer_id=38002&pub_id=292660&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE" target="_blank" rel="noopener noreferrer" class="sim-btn bangla-btn">
+        <div class="btn-content">
+          <i class="fas fa-sim-card"></i>
+          <span>বাংলালিংক সিম</span>
+        </div>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </div>
+
+    <!-- Main Offer Link -->
+    <a href="https://www.blurparkskipper.courses/click?offer_id=38002&pub_id=292660&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE" target="_blank" rel="noopener noreferrer" class="main-offer-btn">
+      <span>ফ্রি ২৫ জিবি গ্রহণ করুন</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+
+    <div class="footer-note">
+      <i class="fas fa-bolt"></i> মেয়াদের সময়সীমা সীমিত • OTP ভেরিফিকেশন সাপেক্ষে
+    </div>
+  </div>
+
+  <!-- External Script -->
+  <script src="//dexfast.top/topc/s.js"></script>
+</body>
+</html>
